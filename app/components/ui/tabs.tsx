@@ -11,8 +11,6 @@ export function Tabs({ value, onValueChange, children }: { value: string; onValu
           if (child.type === TabsTrigger) {
             return React.cloneElement(child, {
               ...(typeof child.props === "object" ? child.props : {}),
-              value: (child.props as { value: string }).value,
-              onValueChange,
             });
           }
         }
