@@ -7,9 +7,6 @@ interface BranchTableProps {
   branches: BranchWithStatus[];
 }
 
-interface BranchTableProps {
-  branches: Branch[];
-}
 
 const BranchTable: React.FC<BranchTableProps> = ({ branches }) => {
   return (
