@@ -6,18 +6,26 @@ import { useRouter } from "next/navigation";
 
 const ListBranchPage = () => {
   const router = useRouter();
-  const [branches, setBranches] = useState([
+  const [branches, setBranches] = useState<{
+    name: string;
+    location: string;
+    reviewLink: string;
+    contactNo: string;
+    status: "active" | "inactive";
+  }[]>([
     {
       name: "Main Branch",
       location: "New York",
       reviewLink: "https://example.com/review/1",
       contactNo: "1234567890",
+      status: "active",
     },
     {
       name: "West Branch",
       location: "Los Angeles",
       reviewLink: "https://example.com/review/2",
       contactNo: "9876543210",
+      status: "inactive",
     },
   ]);
 
